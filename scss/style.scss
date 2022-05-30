@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$estilos:(
+    color1:#ffffff,
+    color2:#000000,
+);
+
+.nav__list {
+    background-color: map-get($estilos, color2 );
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+ a {
+    color: map-get($estilos , color1);
+    text-align: center;
+    text-decoration: none;
+  }
+
+
+}
+
+  @media screen and (max-width: 600px) {
+
+
+    .oferta{
+          height: 300px;
+      }
+  .nav__list {
+    ul{
+        flex-direction: column;
+        justify-content: center;
+
+    }
+      a{
+          float: none;
+          width: 100%;
+      }
+      background-color: map-get($estilos,color2);
+      color: map-get($estilos, color1 );
+      width: 100%;
+}}
+    
+.list__style{list-style: none;}
+
+.nav__box{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 60px;
+}
+
+.oferta{
+    height:400px;
+}
